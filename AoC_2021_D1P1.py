@@ -1,4 +1,5 @@
 from inp import day1
+from timeit import Timer
 
 def setupdata(data):
     return data.split("\n")
@@ -12,5 +13,6 @@ def increasingcount(data):
 
 
 if __name__ == '__main__':
+    t = Timer(lambda: increasingcount(setupdata(day1)))
+    print(t.timeit(number=1))
     print(increasingcount(setupdata(day1)))
-        

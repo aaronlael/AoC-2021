@@ -1,5 +1,6 @@
 from inp import day1
 from AoC_2021_D1P1 import setupdata
+from timeit import Timer
 
 def windowincreasing(data):
     ic = 0
@@ -13,4 +14,6 @@ def windowincreasing(data):
 
 
 if __name__ == '__main__':
+    t = Timer(lambda: windowincreasing(setupdata(day1)))
+    print(t.timeit(number=1))
     print(windowincreasing(setupdata(day1)))
