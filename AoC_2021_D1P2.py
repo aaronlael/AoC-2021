@@ -4,10 +4,13 @@ from timeit import Timer
 
 def windowincreasing(data):
     ic = 0
+    cache = {}
     for i in range(1,len(data)-2):
-        psum = sum([int(x) for x in [data[i-1], data[i], data[i+1]]])
-        csum = sum([int(x) for x in [data[i], data[i+1], data[i+2]]])
-        if csum > psum:
+        if str(i-1) not in cache:
+            cache[str(i-1)] = sum([int(x) for x in [data[i-1], data[i], data[i+1]]])
+        if str(i) not in cache:
+            cache[str(i)] = sum([int(x) for x in [data[i], data[i+1], data[i+2]]])
+        if cache[str(i)] > cache[str(i-1)]:
             ic += 1
     return ic
 
