@@ -33,7 +33,7 @@ def binrunner(sdata):
         if len(co2) == 1 and len(oxy) == 1:
             return(int(oxy[0], 2) * int(co2[0], 2))
     else:
-        return "Fuck"
+        return "You dun goofed A-A-ron"
 
 
 if __name__ == '__main__':
