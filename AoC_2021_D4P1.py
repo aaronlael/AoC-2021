@@ -8,6 +8,9 @@ def setupcards(data):
     for c in td:
         tcard = c.split("\n")
         tcard = [x.replace("  ", " ").split(" ") for x in tcard]
+        for i in range(len(tcard)):
+            if '' in tcard[i]:
+                tcard[i].remove('')
         cards += [tcard]
     return cards
 
@@ -22,16 +25,19 @@ def bingo(inpcards, inpnumbers):
         v = statemachine(n, cards)
         if v:
             c = 0
-            for r in v:
+            for r in v[0]:
                 c += sum([int(x) for x in r if x != 'x'])
             return c * int(n)
 
 def statemachine(num, cards):
     # returns False or winning card
+    vcards = []
     for i in range(len(cards)):
         cards[i] = cardupdate(num, cards[i])
         if containsvictory(cards[i]):
-            return cards[i]
+            vcards += [cards[i]]
+    if len(vcards) > 0:
+        return vcards
     else:
         return False
 
@@ -54,6 +60,7 @@ def containsvictory(card):
         for j in range(len(card[0])):
             if card[0][j] == 'x':
                 for i in range(1, len(card[0])):
+
                     if card[0][j] != card[i][j]:
                         break
                 else:
