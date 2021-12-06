@@ -7,3 +7,6 @@ This is my repo for my private progress in the advent of code.  I will set it to
 I'm intending to initially write python solutions, then write go solutions later in the same day to further my learning of go.
 
 Happy Holidays!
+
+Follow my progress on my github pages! -> https://aaronlael.github.io/2021/
+
