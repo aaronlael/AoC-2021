@@ -1,6 +1,7 @@
 from inp import day8
 from timeit import Timer
 
+
 def setupdata(data):
     return data.split("\n")
 
