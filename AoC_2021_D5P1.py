@@ -1,7 +1,9 @@
 from inp import day5
 
+
 def setupdata(data):
     return data.split("\n")
+
 
 def overlapcalc(sdata):
     overlap = 0
@@ -12,7 +14,7 @@ def overlapcalc(sdata):
     setpoints = list(set(points))
     for p in setpoints:
         if points.count(p) > 1:
-            overlap +=1
+            overlap += 1
     return overlap
 
 
@@ -22,6 +24,7 @@ def isvertorhoriz(line):
         return True
     else:
         return False
+
 
 def linetopoints(line):
     out = []

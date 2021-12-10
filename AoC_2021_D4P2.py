@@ -1,6 +1,7 @@
 from inp import day4_1, day4_2
 from timeit import Timer
-from AoC_2021_D4P1 import setupcards, caller, statemachine, cardupdate, containsvictory
+from AoC_2021_D4P1 import setupcards, caller, statemachine
+
 
 def bingo(inpcards, inpnumbers):
     cards = setupcards(inpcards)
@@ -18,6 +19,7 @@ def bingo(inpcards, inpnumbers):
                 return c * int(n)
     else:
         return cards
+
 
 if __name__ == '__main__':
     t = Timer(lambda: bingo(day4_2, day4_1))
