@@ -24,9 +24,8 @@ def caller(sdata):
 def turn(sdata):
     sdata = increment(sdata)
     b = True
-    while b == True:
+    while b:
         flashed = False
-        tdata = [x for x in sdata]
         for y in range(len(sdata)):
             for x in range(len(sdata[0])):
                 if sdata[y][x] == 0:
