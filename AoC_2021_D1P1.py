@@ -1,8 +1,10 @@
 from inp import day1
 from timeit import Timer
 
+
 def setupdata(data):
     return data.split("\n")
+
 
 def increasingcount(data):
     ic = 0

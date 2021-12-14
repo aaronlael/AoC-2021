@@ -11,7 +11,6 @@ def setupdata(data):
 
 
 def caller(sdata):
-    flashes = 0
     i = 1
     while True:
         f, sdata = turn(sdata)

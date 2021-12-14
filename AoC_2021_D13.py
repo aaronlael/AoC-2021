@@ -63,6 +63,6 @@ def foldpaper(paper, fold):
 
 
 if __name__ == '__main__':
-   t = Timer(lambda: runner(day13_1, day13_2))
-   print(t.timeit(number=1))
-   print(runner(day13_1, day13_2))
+    t = Timer(lambda: runner(day13_1, day13_2))
+    print(t.timeit(number=1))
+    print(runner(day13_1, day13_2))
