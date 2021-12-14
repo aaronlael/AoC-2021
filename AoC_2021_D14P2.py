@@ -33,8 +33,7 @@ def runner(sdata, data_1):
             tdict[n+k[1]] += statedict[k]
         statedict = copy.deepcopy(tdict)
         steps -= 1
-    # this produces a value that is 1 (without the + 1).  I need to figure out why.
-    return lettercount(statedict) + 1
+    return int(lettercount(statedict))
 
 
 def lettercount(sdict):
@@ -49,13 +48,14 @@ def lettercount(sdict):
             counts[v2] = 0
         counts[v2] += sdict[k]
     for k in counts:
-        if k == data_1[0] or k == data_1[-1]:
+        if k == data_1[1]:
             counts[k] = (counts[k] - 1) / 2
             c += [(k, counts[k])]
         else:
             counts[k] = counts[k] / 2
             c += [(k, counts[k])]
     c.sort(key=lambda x: x[1])
+    print(c[-1][0], c[0][0])
     return c[-1][1] - c[0][1]
 
 
