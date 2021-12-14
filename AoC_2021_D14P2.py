@@ -48,14 +48,13 @@ def lettercount(sdict):
             counts[v2] = 0
         counts[v2] += sdict[k]
     for k in counts:
-        if k == data_1[1]:
+        if k == data_1[1] or k == data_1[0]:
             counts[k] = (counts[k] - 1) / 2
             c += [(k, counts[k])]
         else:
             counts[k] = counts[k] / 2
             c += [(k, counts[k])]
     c.sort(key=lambda x: x[1])
-    print(c[-1][0], c[0][0])
     return c[-1][1] - c[0][1]
 
 
