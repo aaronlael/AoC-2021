@@ -18,9 +18,6 @@ D = 1101
 E = 1110
 F = 1111"""
 
-# data = "A0016C880162017C3686B18A3D4780"
-
-
 def setupbin(bin) -> dict:
     binmap = {}
     b = bin.split("\n")
