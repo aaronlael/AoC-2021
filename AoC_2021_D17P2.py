@@ -18,10 +18,8 @@ def runner(bounds):
     vc = 0
     coords = []
     xf = xfactors(bounds)
-    # for x in range(xf[0], xf[1]+1):
     for x in range(xf[0],xf[1] ):
         yf = yfactors(bounds)
-        # for y in range(yf[0], yf[1]+1):
         for y in range(yf[0],yf[1]):
             b, c = nextpoint([x, y], bounds)
             if b:
