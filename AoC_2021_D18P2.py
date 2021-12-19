@@ -2,7 +2,6 @@ from inp import day18 as data
 import ast
 import itertools
 from timeit import Timer
-import string
 
 
 nums = "1234567890"
