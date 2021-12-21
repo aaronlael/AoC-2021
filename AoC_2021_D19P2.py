@@ -1,7 +1,6 @@
 from inp import day19 as data
 from timeit import Timer
 import itertools
-import math
 
 
 
